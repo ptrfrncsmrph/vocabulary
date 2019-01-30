@@ -6,9 +6,10 @@ I would like to get a sheet of vocabulary words and definitions together to look
 Your submission should be in this format.
 
 vocabulary word {
-definition:
-example: 
-comments:
+definition: ""
+example: ""
+comments: ""
+relevant-links:
 }
 
 // EXAMPLE
@@ -16,6 +17,6 @@ comments:
 vocabulary word {
 definition: Template literals are string literals allowing embedded expressions.
 example: `string text ${expression} string text`
-relevant-links: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 description: Template literals are enclosed by the back-tick (` `)  (grave accent) character instead of double or single quotes. Template literals can contain placeholders. These are indicated by the dollar sign and curly braces (${expression}).
+relevant-links: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 }
