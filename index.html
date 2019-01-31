@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vocabulary</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+  <form action="#">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text">
+    </div>
+    <div>
+      <label for="definition">Definition</label>
+      <input id="definition" name="definition" type="text">
+    </div>
+    <div>
+      <label for="example">Example</label>
+      <textarea id="example" name="example"></textarea>
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <input id="description" name="description" type="text">
+    </div>
+    <div>
+      <label for="relevant-links">Relevant links</label>
+      <input id="links" name="relevant-links" type="text">
+    </div>
+
+    <button>Submit</button>
+  </form>
+  <pre id="result"></pre>
+
+</body>
+<script>
+  const form = document.querySelector("form")
+  form.onsubmit = handleSubmit
+  function handleSubmit(e) {
+    e.preventDefault()
+    const name = document.getElementById("name").value
+    const definition = document.getElementById("definition").value
+    const example = document.getElementById("example").value
+    const description = document.getElementById("description").value
+    const links = document.getElementById("links").value
+    const result = document.getElementById("result")
+    const jsonResult = JSON.stringify({ name, definition, example, description, "relative-links": links }, null, 2)
+    result.textContent = jsonResult
+  }
+</script>
+
+</html>
